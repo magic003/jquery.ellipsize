@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+        <title>jQuery Ellipsize Demo</title>
+
+        <style type="text/css">
+            .clear { clear: both; }
+            .columns .column {
+                float: left;
+                margin: 0 20px 0 0;
+                width: 350px;
+            }
+            
+            /* Setup content panels */
+            .content {
+                margin: 0 0 10px;
+                border: 1px dashed #888;
+                padding: 10px;
+                line-height: 20px;
+                width: 300px;
+            }
+            
+            .content p {
+                overflow: hidden;   /* Overflow hidden is required for plugin. */
+                margin: 0;
+                padding: 0;
+                width: 300px;       /* Width is optional if container defines the width */
+            }
+            .content p.multiline {
+                height: 120px;       /* Height is required for multiple lines to set line limit. */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="columns">
+        
+            <div class="column">
+                <h1>Without ellipsis</h1>
+                <div class="content">
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at tincidunt mauris. Cras ac nibh id ante pharetra egestas. Maecenas pharetra augue ut erat tempor at rhoncus mi tincidunt. Nulla at erat sem. Nam id sem enim, at tincidunt mauris. Nunc ut magna arcu, ac blandit mauris. Nunc in sapien enim. Quisque dui orci, hendrerit id hendrerit eget, tristique ut urna. Donec adipiscing lectus ut velit ullamcorper vehicula. Suspendisse potenti.</p>
+                </div>
+                <div class="content">
+                    <p class="multiline">Aenean eget risus sed urna eleifend fermentum. Mauris iaculis lobortis rhoncus. Aliquam pellentesque, lorem ut commodo consequat, quam dolor varius sem, quis fermentum elit est sit amet neque. Sed mattis mollis sapien, vulputate interdum dui commodo nec. Pellentesque mattis imperdiet massa, ut volutpat diam sodales mattis. Nunc tincidunt facilisis odio adipiscing tempus. Praesent commodo, dui quis molestie euismod, felis orci rutrum erat, a interdum mauris elit vel risus. Praesent scelerisque nulla a eros bibendum varius. Pellentesque faucibus, nisl a lacinia ultricies, arcu odio facilisis nibh, nec pulvinar sapien urna id dolor. Pellentesque consectetur imperdiet ligula vel dignissim. Proin lacinia ante sit amet quam pulvinar adipiscing. Nulla ligula nibh, vestibulum ac sollicitudin id, sollicitudin ac velit. Integer odio libero, interdum ut semper adipiscing, tempus in eros.</p>
+                </div>
+                <div class="content">
+                    <p class="multiline">Nulla sapien urna, pharetra nec hendrerit quis, elementum id purus. Cras vitae lectus lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sed nibh eu mi accumsan ultricies. Sed cursus faucibus dignissim. Nam venenatis velit eget ipsum faucibus viverra. Nulla non felis in orci luctus molestie id nec mi. Ut ligula nisi, feugiat id convallis nec, vestibulum in magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla porttitor purus sed arcu vulputate venenatis. Nam quis metus leo, eget cursus ipsum. Praesent semper, libero sit amet viverra auctor, enim nisi vehicula nisl, sit amet fermentum leo urna in mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel scelerisque justo. Nullam magna leo, pretium eget luctus eget, aliquam in massa. Mauris quis mi vel est ultrices aliquet.</p>
+                </div>
+                <div class="content">
+                    <p class="multiline">本赛季第一场国家德比在伯纳乌开战，穆里尼奥的球队第一次以领头羊身份带着15连胜的辉煌战绩在主场迎来宿敌巴塞罗那。对巴塞罗那来说，这是一场没有退路只有去<em>取胜</em>才能挽回联赛差距的<em>比赛</em>。“我必须决定我们会是勇敢还是非常勇敢。”<em>最后事实证明</em>，瓜迪奥拉的球队在伯纳乌拿出了令人钦佩的勇气，“展现了俱乐部的精髓。”许多人说本赛季的巴萨已经不如上赛季，更多人寄希望于穆里尼奥能在今年做掉巴塞罗那，因为他们拥有着一支更为强大的队伍。从数据和战绩上看马德里已经给人一种称霸地球不可一世的态势出来，对巴萨来说也许我们不必先看数据战绩，从<em>瓜迪奥拉</em>的战术策略中也能将巴萨的走势看很清楚。从刚带队的头两个赛季<em>瓜迪奥拉</em>基本就是一套阵容用到底，以不变应万变。上赛季开始，瓜迪奥拉开始敢于求变化，但这种变化主要发生在中后场。到了本赛季，教练已经在26场比赛中拿出26个不同首发，几乎每个人都踢过不同两个位置，以其变化之大令这支巴萨变得不可预测。从不变应万变到被动变化再到主动变阵，可见瓜迪奥拉对这支球队的掌握已经开始游刃有余。今年的巴萨的确已经和以前不一样了，这是一支富于变化敢于挑战的成熟的巴萨，它正值壮年。本场比赛的首发为433，四后卫是佩普最信任的阿尔维斯，普约尔，皮奎，阿比达尔；中场也不变，哈维与伊涅斯塔双核，布斯克茨后腰；锋线上瓜迪奥拉放弃了MVP中的两位，由桑切斯和法布雷加斯与梅西搭档，江湖人称“法西斯”。法西斯组合是变阵的亮点与核心，最后的两个进球都与法西斯有关。通过一场比赛完全体现了两位新援的价值，桑切斯虽称智利吸螺，比起越是大赛越丢状态的葡萄牙人，桑切斯凭借超一流的个人技术以及卓绝的自信，戏耍三名皇马球员打入关键的扳平进球，为逆转奠定基础。而小法更是瓜迪奥拉最为倚重的变招突破点，进可攻当伪中锋用，退可守是一流后腰。</p>
+                </div>
+            </div>
+            
+            <div class="column">
+                <h1>With ellipsize</h1>
+                <div class="content">
+                    <p class="ellipsize multiline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at tincidunt mauris. Cras ac nibh id ante pharetra egestas. Maecenas pharetra augue ut erat tempor at rhoncus mi tincidunt. Nulla at erat sem. Nam id sem enim, at tincidunt mauris. Nunc ut magna arcu, ac blandit mauris. Nunc in sapien enim. Quisque dui orci, hendrerit id hendrerit eget, tristique ut urna. Donec adipiscing lectus ut velit ullamcorper vehicula. Suspendisse potenti.</p>
+                </div>
+                <div class="content">
+                    <p class="ellipsize multiline">Aenean eget risus sed urna eleifend fermentum. Mauris iaculis lobortis rhoncus. Aliquam pellentesque, lorem ut commodo consequat, quam dolor varius sem, quis fermentum elit est sit amet neque. Sed mattis mollis sapien, vulputate interdum dui commodo nec. Pellentesque mattis imperdiet massa, ut volutpat diam sodales mattis. Nunc tincidunt facilisis odio adipiscing tempus. Praesent commodo, dui quis molestie euismod, felis orci rutrum erat, a interdum mauris elit vel risus. Praesent scelerisque nulla a eros bibendum varius. Pellentesque faucibus, nisl a lacinia ultricies, arcu odio facilisis nibh, nec pulvinar sapien urna id dolor. Pellentesque consectetur imperdiet ligula vel dignissim. Proin lacinia ante sit amet quam pulvinar adipiscing. Nulla ligula nibh, vestibulum ac sollicitudin id, sollicitudin ac velit. Integer odio libero, interdum ut semper adipiscing, tempus in eros.</p>
+                </div>
+                <div class="content">
+                    <p class="ellipsize multiline">Nulla sapien urna, pharetra nec hendrerit quis, elementum id purus. Cras vitae lectus lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam sed nibh eu mi accumsan ultricies. Sed cursus faucibus dignissim. Nam venenatis velit eget ipsum faucibus viverra. Nulla non felis in orci luctus molestie id nec mi. Ut ligula nisi, feugiat id convallis nec, vestibulum in magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla porttitor purus sed arcu vulputate venenatis. Nam quis metus leo, eget cursus ipsum. Praesent semper, libero sit amet viverra auctor, enim nisi vehicula nisl, sit amet fermentum leo urna in mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel scelerisque justo. Nullam magna leo, pretium eget luctus eget, aliquam in massa. Mauris quis mi vel est ultrices aliquet.</p>
+                </div>
+                <div class="content">
+                    <p class="ellipsize multiline">本赛季第一场国家德比在伯纳乌开战，穆里尼奥的球队第一次以领头羊身份带着15连胜的辉煌战绩在主场迎来宿敌巴塞罗那。对巴塞罗那来说，这是一场没有退路只有去<em>取胜</em>才能挽回联赛差距的<em>比赛</em>。“我必须决定我们会是勇敢还是非常勇敢。”<em>最后事实证明</em>，瓜迪奥拉的球队在伯纳乌拿出了令人钦佩的勇气，“展现了俱乐部的精髓。”许多人说本赛季的巴萨已经不如上赛季，更多人寄希望于穆里尼奥能在今年做掉巴塞罗那，因为他们拥有着一支更为强大的队伍。从数据和战绩上看马德里已经给人一种称霸地球不可一世的态势出来，对巴萨来说也许我们不必先看数据战绩，从<em>瓜迪奥拉</em>的战术策略中也能将巴萨的走势看很清楚。从刚带队的头两个赛季<em>瓜迪奥拉</em>基本就是一套阵容用到底，以不变应万变。上赛季开始，瓜迪奥拉开始敢于求变化，但这种变化主要发生在中后场。到了本赛季，教练已经在26场比赛中拿出26个不同首发，几乎每个人都踢过不同两个位置，以其变化之大令这支巴萨变得不可预测。从不变应万变到被动变化再到主动变阵，可见瓜迪奥拉对这支球队的掌握已经开始游刃有余。今年的巴萨的确已经和以前不一样了，这是一支富于变化敢于挑战的成熟的巴萨，它正值壮年。本场比赛的首发为433，四后卫是佩普最信任的阿尔维斯，普约尔，皮奎，阿比达尔；中场也不变，哈维与伊涅斯塔双核，布斯克茨后腰；锋线上瓜迪奥拉放弃了MVP中的两位，由桑切斯和法布雷加斯与梅西搭档，江湖人称“法西斯”。法西斯组合是变阵的亮点与核心，最后的两个进球都与法西斯有关。通过一场比赛完全体现了两位新援的价值，桑切斯虽称智利吸螺，比起越是大赛越丢状态的葡萄牙人，桑切斯凭借超一流的个人技术以及卓绝的自信，戏耍三名皇马球员打入关键的扳平进球，为逆转奠定基础。而小法更是瓜迪奥拉最为倚重的变招突破点，进可攻当伪中锋用，退可守是一流后腰。</p>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+        </div>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+        <script type="text/javascript" src="../src/jquery.ellipsize.js"></script>
+        <script type="text/javascript">
+            // Activate the ellipsize plugin.
+            $(function () {
+                $('.ellipsize').ellipsize({'ellipsis': '...', 'multiline': true});
+            });
+        </script>
+    </body>
+</html>
