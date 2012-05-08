@@ -22,7 +22,9 @@
                         .hide()
                         .css({
                             'position': 'absolute',
-                            'overflow': 'visible'
+                            'overflow': 'visible',
+                            'max-width': 'none',
+                            'max-height': 'none'
                         })
                         .width(multiline ? el.width() : 'auto')
                         .height(multiline ? 'auto' : el.height());
