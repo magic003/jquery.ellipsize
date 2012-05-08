@@ -53,7 +53,7 @@
                 // using binary search to ellipsize the element
                 var c = t;
                 while(true) {
-
+                    // text node, we should finally come to here
                     if(c.nodeType == 3) {
                         var text = c.nodeValue,
                             low = 0,
@@ -74,40 +74,22 @@
                         
                         if(ellipsizedText) {
                             c.nodeValue = ellipsizedText;
-                        } 
-                        break;
-                    } 
-                    
-                    var children = c.contents();
-
-                    if(children.length == 1 && children.get(0).nodeType == 3) {  // element only contains plain text
-                        var text = c.text(),
-                            low = 0,
-                            high = text.length - 1,
-                            ellipsizedText = null;
-                        while(low <= high) {
-                            var mid = Math.floor((low + high) / 2);
-                            var str = text.substring(0, mid+1) + ellipsisText;
-                            c.text(str);
-
-                            if(fit()) {
-                                low = mid + 1;
-                                ellipsizedText = str;
-                            } else {
-                                high = mid - 1;
+                        } else {
+                            // if no ellipsizedText found, need to remove the 
+                            // parent element and append ellipsis
+                            p = $(c).parent();
+                            while(p.contents().length == 1) {
+                                c = p;
+                                p = p.parent();
                             }
+                            c.remove();
+                            p.append(ellipsisText);
                         }
                         
-                        if(ellipsizedText) {
-                            c.text(ellipsizedText);
-                        } else {
-                            // if no ellipsizedText found, replace current
-                            // element with ellipsis
-                            c.replaceWith(ellipsisText);
-                        }
                         break;
                     } else {
-                        var low = 0,
+                        var children = c.contents(),
+                            low = 0,
                             high = children.length - 1,
                             cutEl;
                         while(low <= high) {
