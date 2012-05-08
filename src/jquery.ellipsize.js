@@ -53,10 +53,34 @@
                 // using binary search to ellipsize the element
                 var c = t;
                 while(true) {
+
+                    if(c.nodeType == 3) {
+                        var text = c.nodeValue,
+                            low = 0,
+                            high = text.length - 1,
+                            ellipsizedText = null;
+                        while(low <= high) {
+                            var mid = Math.floor((low + high) / 2);
+                            var str = text.substring(0, mid+1) + ellipsisText;
+                            c.nodeValue = str;
+
+                            if(fit()) {
+                                low = mid + 1;
+                                ellipsizedText = str;
+                            } else {
+                                high = mid - 1;
+                            }
+                        }
+                        
+                        if(ellipsizedText) {
+                            c.nodeValue = ellipsizedText;
+                        } 
+                        break;
+                    } 
+                    
                     var children = c.contents();
 
-                    // element only contains plain text
-                    if(children.length == 1 && children.get(0).nodeType == 3) {
+                    if(children.length == 1 && children.get(0).nodeType == 3) {  // element only contains plain text
                         var text = c.text(),
                             low = 0,
                             high = text.length - 1,
@@ -105,7 +129,9 @@
                             }
                         }
 
-                        if(cutEl) {
+                        if(cutEl && cutEl.nodeType == 3) {
+                            c = cutEl;
+                        } else if(cutEl) {
                             c = $(cutEl);
                         } else {
                             // no cut Element found, hopefully this could
