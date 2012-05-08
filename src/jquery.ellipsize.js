@@ -113,7 +113,9 @@
                             }
                         }
 
-                        if(cutEl && cutEl.nodeType == 3) {
+                        if(children.length == 0) {
+                            $(c).replaceWith(ellipsisText);
+                        } else if(cutEl && cutEl.nodeType == 3) {
                             c = cutEl;
                         } else if(cutEl) {
                             c = $(cutEl);
