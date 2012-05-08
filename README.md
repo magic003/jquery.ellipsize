@@ -9,4 +9,3 @@ This is a jQuery ellipsis plugin based on [jquery-ellipsis](https://github.com/s
 Known Issues
 ------------
 
-* It goes into an infinite loop if the cut element is a text node.
