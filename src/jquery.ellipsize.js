@@ -84,7 +84,7 @@
                                 c = p;
                                 p = p.parent();
                             }
-                            c.remove();
+                            $(c).remove();
                             p.append(ellipsisText);
                         }
                         
